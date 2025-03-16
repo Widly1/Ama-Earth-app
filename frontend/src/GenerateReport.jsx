@@ -46,7 +46,7 @@ const GenerateReport = () => {
 
       {report && (
         <div className={styles.reportContainer}>
-          <h3>Generated Report:</h3>
+          <h3 className = {styles.title2}>Generated Report:</h3>
           <p style={{ whiteSpace: 'pre-wrap', textAlign: 'left' }}>{report}</p>
         </div>
       )}
