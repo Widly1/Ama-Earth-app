@@ -1,5 +1,7 @@
 // GenerateReport.jsx
+// updated with our new GR(generate report) module.css file
 import { useState } from 'react';
+import styles from './GenerateReport.module.css'; // Import the CSS Module
 
 const GenerateReport = () => {
   const [input, setInput] = useState('');
@@ -28,50 +30,22 @@ const GenerateReport = () => {
   };
 
   return (
-    <div style={{
-      padding: '30px',
-      maxWidth: '700px',
-      margin: '0 auto',
-      backgroundColor: '#f5f9f6',
-      borderRadius: '10px',
-      boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
-      textAlign: 'center'
-    }}>
-      <h1 style={{ color: '#2E7D32', fontSize: '24px' }}>Ama Earth's Environmental Report Generator</h1>
+    <div className={styles.container}>
+      <h1 className={styles.title}>Ama Earth's Environmental Report Generator</h1>
       <textarea
         value={input}
         onChange={(e) => setInput(e.target.value)}
         placeholder="Enter environmental data..."
         rows="6"
-        style={{
-          width: '100%',
-          padding: '12px',
-          borderRadius: '8px',
-          border: '1px solid #ccc',
-          marginTop: '10px',
-          resize: 'none'
-        }}
+        className={styles.textarea}
       />
-      <button
-        onClick={generateReport}
-        style={{
-          padding: '12px 20px',
-          backgroundColor: loading ? '#A5D6A7' : '#4CAF50',
-          color: 'white',
-          cursor: 'pointer',
-          marginTop: '15px',
-          borderRadius: '8px',
-          border: 'none',
-          fontSize: '16px'
-        }}
-        disabled={loading}
-      >
+      <button onClick={generateReport} className={styles.button} disabled={loading}>
         {loading ? 'Generating...' : 'Generate Report'}
       </button>
 
       {report && (
-        <div style={{ marginTop: '20px', padding: '15px', backgroundColor: '#E8F5E9', borderRadius: '8px' }}>
-          <h3 style={{ color: '#2E7D32' }}>Generated Report:</h3>
+        <div className={styles.reportContainer}>
+          <h3>Generated Report:</h3>
           <p style={{ whiteSpace: 'pre-wrap', textAlign: 'left' }}>{report}</p>
         </div>
       )}
