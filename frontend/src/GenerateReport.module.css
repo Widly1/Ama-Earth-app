@@ -14,6 +14,12 @@
     font-size: 24px;
   }
   
+  .title2 {
+    background-image: linear-gradient(green, purple);
+    color: transparent;
+    background-clip: text;
+  }
+  
   .textarea {
     width: 100%;
     padding: 12px;

@@ -32,6 +32,7 @@ const GenerateReport = () => {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Ama Earth's Environmental Report Generator</h1>
+      <h2 className ={styles.title2}>Powered By Google's  Gemini</h2>
       <textarea
         value={input}
         onChange={(e) => setInput(e.target.value)}
