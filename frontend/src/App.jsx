@@ -1,8 +1,11 @@
+// App.jsx
+import GenerateReport from './GenerateReport';
+
 function App() {
   return (
     <div>
-      <h1>Environmental Report Generator</h1>
-      <p>Enter environmental data below to generate a report.</p>
+      {/* Include the GenerateReport component */}
+      <GenerateReport />
     </div>
   );
 }
