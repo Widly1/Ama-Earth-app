@@ -1,4 +1,5 @@
 // updated server.js backend file, created using node.js
+require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -7,7 +8,8 @@ const { GoogleGenerativeAI } = require("@google/generative-ai");
 const app = express();
 const port = 5001;
 
-const GOOGLE_API_KEY = "AIzaSyAwKFza9NMXUFb9qEJsxCYP6e0TLO50jJs"; // my google gemini api key
+// can be found in google gemini API documents
+const GOOGLE_API_KEY = process.env.My_GEMINI_API_KEY; // my google gemini api key (in the env file)
 const genAI = new GoogleGenerativeAI(GOOGLE_API_KEY);
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro-latest"});
 
@@ -17,6 +19,7 @@ app.use(bodyParser.json());
 
 // API Route to Generate Report
 app.post('/generate-report', async (req, res) => {
+  // our request is coming from the userInput 
   const { userInput } = req.body;
 
   if (!userInput) {
@@ -40,7 +43,7 @@ app.post('/generate-report', async (req, res) => {
   }
 });
 
-// start the server
+// start the server and make sure it's running with a log
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });

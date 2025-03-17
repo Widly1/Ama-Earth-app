@@ -14,7 +14,7 @@
     font-size: 24px;
   }
   
-  .title2 {
+  .multicolor {
     background-image: linear-gradient(green, purple);
     color: transparent;
     background-clip: text;
@@ -32,6 +32,7 @@
     border: 1px solid #ccc;
     margin-top: 10px;
     resize: none;
+    background-color:lightgray
   }
   
   .button {
@@ -48,6 +49,7 @@
   
   .button:hover {
     background-color: #388E3C;
+    color: greenyellow
   }
   
   .reportContainer {

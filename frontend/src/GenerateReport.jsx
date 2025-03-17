@@ -32,12 +32,12 @@ const GenerateReport = () => {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Ama Earth's Environmental Report Generator</h1>
-      <h2 className ={styles.title2}>Powered By Google's  Gemini</h2>
+      <h2 className ={styles.multicolor}>Featuring Google's Gemini</h2>
       <textarea
         value={input}
-        onChange={(e) => setInput(e.target.value)}
-        placeholder="Enter environmental data..."
-        rows="6"
+        onChange={(e) => setInput(e.target.value)} // update "input" state with the value being typed in the input field  
+        placeholder="Ask me your environmental question..."
+        rows="8"
         className={styles.textarea}
       />
       <button onClick={generateReport} className={styles.button} disabled={loading}>
@@ -46,7 +46,7 @@ const GenerateReport = () => {
 
       {report && (
         <div className={styles.reportContainer}>
-          <h3 className = {styles.title2}>Generated Report:</h3>
+          <h3 className = {styles.multicolor}>Generated Report:</h3>
           <p style={{ whiteSpace: 'pre-wrap', textAlign: 'left' }}>{report}</p>
         </div>
       )}
