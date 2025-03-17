@@ -15,6 +15,18 @@
     font-size: 24px;
   }
   
+  .aboutUs{
+    text-align: left;
+    font-size: 15px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 3px solid green;
+    margin-top: 1px;
+    resize: none;
+    background-color:whitesmoke
+  }
+  
   .multicolor {
     background-image: linear-gradient(green, purple);
     color: transparent;
@@ -30,7 +42,7 @@
     width: 100%;
     padding: 12px;
     border-radius: 8px;
-    border: 1px solid #ccc;
+    border: 3px solid green;
     margin-top: 10px;
     resize: none;
     background-color:lightgray
@@ -60,16 +72,16 @@
     border-radius: 8px;
   }
   
-  .aboutUs{
-    text-align: left;
-    font-size: 15px;
-    width: 100%;
-    padding: 10px;
-    border-radius: 8px;
-    border: 3px solid green;
-    margin-top: 1px;
-    resize: none;
-    background-color:whitesmoke
 
+  .fadeInText {
+    font-size: 18px;
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+  }
+  
+  @keyframes fadeIn {
+    100% {
+      opacity: 1;
+    }
   }
   

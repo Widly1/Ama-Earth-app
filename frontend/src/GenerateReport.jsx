@@ -51,7 +51,11 @@ const GenerateReport = () => {
       {report && (
         <div className={styles.reportContainer}>
           <h3 className = {styles.multicolor}>Generated Report:</h3>
-          <p style={{ whiteSpace: 'pre-wrap', textAlign: 'left' }}>{report}</p>
+            <p
+              className = {styles.fadeInText} 
+              style={{ whiteSpace: 'pre-wrap', textAlign: 'left' }}>
+              {report}
+              </p>
         </div>
       )}
     
