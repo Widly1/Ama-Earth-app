@@ -33,23 +33,28 @@ const GenerateReport = () => {
     <div className={styles.container}>
       <h1 className={styles.title}>Ama Earth's Environmental Report Generator</h1>
       <h2 className ={styles.multicolor}>Featuring Google's Gemini</h2>
+        <div className= {styles.aboutUs}>
+          <h3>About Ama Earth's Environmental Report Generator: </h3> 
+          <p>The purpose of this site is to educate and inform individuals who are curious about our environmental health, progress, and more. </p>
+          <p>Powered by Google's AI, Gemini, all you have to do is type below in the text box and a report will be generated for you based on your inquiry. </p>
+        </div>
       <textarea
         value={input}
         onChange={(e) => setInput(e.target.value)} // update "input" state with the value being typed in the input field  
-        placeholder="Ask me your environmental question..."
+        placeholder="Enter your environmental question. I'll generate the report for you 😄" style = {{fontSize: '13px'}}
         rows="8"
         className={styles.textarea}
       />
       <button onClick={generateReport} className={styles.button} disabled={loading}>
         {loading ? 'Generating...' : 'Generate Report'}
       </button>
-
       {report && (
         <div className={styles.reportContainer}>
           <h3 className = {styles.multicolor}>Generated Report:</h3>
           <p style={{ whiteSpace: 'pre-wrap', textAlign: 'left' }}>{report}</p>
         </div>
       )}
+    
     </div>
   );
 };
