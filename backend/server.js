@@ -6,7 +6,9 @@ const cors = require('cors');
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 const app = express();
-const port = 5001;
+// const port = 5001;
+const port = process.env.PORT || 3000;
+
 
 // can be found in google gemini API documents
 const GOOGLE_API_KEY = process.env.My_GEMINI_API_KEY; // my google gemini api key (in the env file)
