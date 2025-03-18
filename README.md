@@ -24,8 +24,6 @@ Enter your environmental query in the provided text box.
 
 Submit your request to generate a detailed environmental report.
 
-Download the generated report for further use.
-
 Technologies Used
 
 Frontend: React.js
