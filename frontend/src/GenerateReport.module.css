@@ -1,0 +1,87 @@
+/* I created this file as an alternative for using inline styles in the generate report jsx file */
+/* however, for some cases you will see inline styles */
+.container {
+    padding: 30px;
+    max-width: 700px;
+    margin: 20px auto;
+    background-color: #f5f9f6;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .title {
+    color: #2E7D32;
+    font-size: 24px;
+  }
+  
+  .aboutUs{
+    text-align: left;
+    font-size: 15px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 3px solid green;
+    margin-top: 1px;
+    resize: none;
+    background-color:whitesmoke
+  }
+  
+  .multicolor {
+    background-image: linear-gradient(green, purple);
+    color: transparent;
+    background-clip: text;
+  }
+  .h3color {
+    background-image: linear-gradient(blue, green);
+    color: transparent;
+    background-clip: text;
+  }
+  
+  .textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 3px solid green;
+    margin-top: 10px;
+    resize: none;
+    background-color:lightgray
+  }
+  
+  .button {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer ;
+    margin-top: 15px;
+    border-radius: 15px;
+    border: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #388E3C;
+    color: greenyellow
+  }
+  
+  .reportContainer {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #E8F5E9;
+    border-radius: 8px;
+  }
+  
+
+  .fadeInText {
+    font-size: 18px;
+    opacity: 0;
+    animation: fadeIn 5s forwards;
+  }
+  
+  @keyframes fadeIn {
+    100% {
+      opacity: 1;
+    }
+  }
+  
