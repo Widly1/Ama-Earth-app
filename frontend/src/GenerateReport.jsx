@@ -8,10 +8,12 @@ const GenerateReport = () => {
   const [report, setReport] = useState('');
   const [loading, setLoading] = useState(false);
 
+  const backendURL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:3000'; 
+
   const generateReport = async () => {
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:3000/generate-report', {
+      const response = await fetch(`${backendURL}/generate-report`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ userInput: input }),
