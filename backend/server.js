@@ -6,12 +6,17 @@ const cors = require('cors');
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 const app = express();
-// const port = 5001;
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000; 
 
 
 // can be found in google gemini API documents
 const GOOGLE_API_KEY = process.env.My_GEMINI_API_KEY; // my google gemini api key (in the env file)
+// in case API key isn't loaded
+if (!GOOGLE_API_KEY) {
+  console.error("Missing Google Gemini API Key. Check your .env file.");
+  process.exit(1); // Stop the server if the API key is missing
+}
+
 const genAI = new GoogleGenerativeAI(GOOGLE_API_KEY);
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro-latest"});
 

@@ -8,7 +8,7 @@ const GenerateReport = () => {
   const [report, setReport] = useState('');
   const [loading, setLoading] = useState(false);
 
-  const backendURL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:3000'; 
+  const backendURL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:4000';
 
   const generateReport = async () => {
     setLoading(true);
@@ -52,8 +52,8 @@ const GenerateReport = () => {
       <h1 className={styles.title}>Ama Earth's Environmental Report Generator</h1>
       <h2 className ={styles.multicolor}>Featuring Google's Gemini</h2>
         <div className= {styles.aboutUs}>
-          <h3>About Ama Earth's Environmental Report Generator: </h3> 
-          <p>The purpose of this site is to educate and inform individuals who are curious about our environmental health, progress, and more. </p>
+          <h3>Simple AI Report Generator: </h3> 
+          <p>The purpose of this site is to create a simple react frontend and nodejs backend that uses AI. </p>
           <p>Powered by Google's AI, Gemini, all you have to do is type below in the text box and a report will be generated for you based on your inquiry. </p>
         </div>
       <textarea
